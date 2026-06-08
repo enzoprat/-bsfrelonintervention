@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-cream text-graytext antialiased;
+    font-feature-settings: "cv11", "ss01";
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+    text-wrap: balance;
+  }
+
+  /* Cible de tap minimale confortable sur mobile */
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    @apply bg-amber/30 text-ink;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3
+           text-base font-semibold transition-all duration-200
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-call {
+    @apply btn bg-safety text-white shadow-soft hover:bg-safety-dark
+           focus-visible:ring-safety active:scale-[0.98];
+  }
+
+  .btn-amber {
+    @apply btn bg-amber text-ink shadow-soft hover:bg-amber-dark
+           focus-visible:ring-amber active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply btn border-2 border-ink/15 bg-white/70 text-ink
+           hover:border-ink/30 hover:bg-white focus-visible:ring-ink/30;
+  }
+
+  .btn-eco {
+    @apply btn bg-eco text-white hover:bg-eco-dark focus-visible:ring-eco;
+  }
+
+  .card {
+    @apply rounded-2xl border border-ink/5 bg-white p-6 shadow-soft;
+  }
+
+  /* Bouton avec reflet animé au survol */
+  .btn-shine {
+    @apply relative overflow-hidden;
+  }
+  .btn-shine::after {
+    content: "";
+    @apply pointer-events-none absolute inset-y-0 -left-1/3 w-1/3
+           bg-gradient-to-r from-transparent via-white/40 to-transparent;
+    transform: translateX(-120%) skewX(-20deg);
+  }
+  .btn-shine:hover::after {
+    animation: shimmer 0.9s ease-out;
+  }
+
+  /* Halo pulsé pour le CTA principal */
+  .cta-glow {
+    @apply animate-glow-pulse;
+  }
+
+  /* Carte interactive : bordure dégradée + élévation au survol */
+  .card-interactive {
+    @apply relative rounded-2xl border border-ink/5 bg-white p-6 shadow-soft
+           transition-[transform,box-shadow] duration-300 ease-out;
+  }
+  .card-interactive::before {
+    content: "";
+    @apply pointer-events-none absolute inset-0 rounded-2xl opacity-0
+           transition-opacity duration-300;
+    padding: 1.5px;
+    background: linear-gradient(135deg, #F4B000, #FF6B1A);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+  .card-interactive:hover {
+    @apply -translate-y-1.5 shadow-card;
+  }
+  .card-interactive:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Soulignement animé pour les liens de nav */
+  .nav-underline {
+    @apply relative;
+  }
+  .nav-underline::after {
+    content: "";
+    @apply absolute -bottom-0.5 left-3 right-3 h-0.5 origin-left scale-x-0
+           rounded-full bg-amber transition-transform duration-300;
+  }
+  .nav-underline:hover::after {
+    @apply scale-x-100;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full bg-amber/15 px-3 py-1
+           text-xs font-semibold uppercase tracking-wide text-amber-dark;
+  }
+
+  .prose-local {
+    @apply max-w-none text-[1.02rem] leading-relaxed text-graytext;
+  }
+  .prose-local h2 {
+    @apply mt-10 mb-3 text-2xl font-bold text-ink sm:text-3xl;
+  }
+  .prose-local h3 {
+    @apply mt-7 mb-2 text-xl font-semibold text-ink;
+  }
+  .prose-local p {
+    @apply mb-4;
+  }
+  .prose-local ul {
+    @apply mb-4 space-y-2 pl-1;
+  }
+  .prose-local li {
+    @apply relative pl-6;
+  }
+  .prose-local li::before {
+    content: "";
+    @apply absolute left-0 top-2.5 h-2 w-2 rounded-full bg-amber;
+  }
+  .prose-local a {
+    @apply font-semibold text-eco underline decoration-eco/40 underline-offset-2 hover:text-eco-dark;
+  }
+  .prose-local strong {
+    @apply text-ink;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
