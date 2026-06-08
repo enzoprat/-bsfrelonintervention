@@ -53,8 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="flex min-h-screen flex-col">
         <JsonLd data={localBusinessSchema()} />
         <Header />
-        {/* pb pour ne pas masquer le contenu derrière la barre fixe mobile */}
-        <main className="flex-1 pb-20 lg:pb-0">{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
         <StickyCallBar />
         <BackToTop />

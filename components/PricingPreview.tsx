@@ -30,9 +30,9 @@ export function PricingPreview() {
                 >
                   <th
                     scope="row"
-                    className="px-5 py-4 text-sm font-medium text-graytext sm:text-base"
+                    className="px-3 py-4 text-sm font-medium text-graytext sm:px-5 sm:text-base"
                   >
-                    <span className="flex items-center gap-2">
+                    <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
                       {r.highlight && (
                         <span className="rounded-full bg-safety/15 px-2 py-0.5 text-xs font-bold text-safety-dark">
                           Populaire
@@ -41,7 +41,7 @@ export function PricingPreview() {
                       {r.label}
                     </span>
                   </th>
-                  <td className="px-5 py-4 text-right">
+                  <td className="px-3 py-4 text-right sm:px-5">
                     <span
                       className={`font-display font-bold ${
                         r.highlight ? "text-safety" : "text-ink"

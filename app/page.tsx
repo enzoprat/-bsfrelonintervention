@@ -9,7 +9,6 @@ import { ServiceCards } from "@/components/ServiceCards";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { ZoneMapPlaceholder } from "@/components/ZoneMapPlaceholder";
 import { PricingPreview } from "@/components/PricingPreview";
-import { ReviewPlaceholder } from "@/components/ReviewPlaceholder";
 import { ReassuranceMarquee } from "@/components/ReassuranceMarquee";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ContactForm } from "@/components/ContactForm";
@@ -95,16 +94,6 @@ export default function HomePage() {
           intro="Le tarif dépend de la hauteur, de l'accessibilité et du type de nid. Nous restons transparents dès le départ."
         />
         <PricingPreview />
-      </Section>
-
-      {/* Avis */}
-      <Section tone="cream">
-        <SectionHeading
-          eyebrow="Avis clients"
-          title="La confiance de nos clients à Bordeaux"
-          intro="Les avis affichés ici sont des emplacements à connecter à votre profil Google Business. Aucun avis n'est inventé."
-        />
-        <ReviewPlaceholder />
       </Section>
 
       {/* Devis (ancre #devis) */}

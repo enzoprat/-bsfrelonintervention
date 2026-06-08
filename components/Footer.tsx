@@ -6,7 +6,7 @@ import { Icon } from "./Icon";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-ink text-cream">
+    <footer className="bg-ink text-cream pb-24 lg:pb-0">
       {/* CTA téléphone */}
       <div className="border-b border-white/10">
         <div className="container-page flex flex-col items-center justify-between gap-4 py-8 text-center sm:flex-row sm:text-left">

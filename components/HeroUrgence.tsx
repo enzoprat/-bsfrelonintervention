@@ -35,7 +35,7 @@ export function HeroUrgence() {
           </span>
 
           <h1 className="mt-5 animate-fade-in-up text-4xl font-extrabold leading-tight text-cream [animation-delay:140ms] sm:text-5xl">
-            Nid de frelons ou de guêpes à Bordeaux ?{" "}
+            Nid de frelons ou de guêpes à Bordeaux&#8239;?{" "}
             <span className="text-amber">Intervention rapide à domicile.</span>
           </h1>
 
@@ -72,7 +72,7 @@ export function HeroUrgence() {
               priority
             />
           </div>
-          <div className="absolute -bottom-4 -left-4 hidden animate-float rounded-2xl border border-white/10 bg-anthracite/95 p-4 shadow-card [animation-delay:-3s] sm:block">
+          <div className="absolute -bottom-4 -right-4 hidden animate-float rounded-2xl border border-white/10 bg-anthracite/95 p-4 shadow-card [animation-delay:-3s] sm:block">
             <p className="flex items-center gap-2 text-sm font-semibold text-cream">
               <Icon name="check" className="h-5 w-5 text-eco" />
               Diagnostic par photo
