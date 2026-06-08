@@ -42,6 +42,7 @@ export const footerNav = {
   legal: [
     { label: "Conseils frelons & guêpes", href: "/conseils" },
     { label: "Mentions légales", href: "/mentions-legales" },
+    { label: "Conditions générales de vente", href: "/conditions-generales-vente" },
     { label: "Politique de confidentialité", href: "/politique-confidentialite" },
     { label: "Plan du site", href: "/plan-du-site" },
   ],

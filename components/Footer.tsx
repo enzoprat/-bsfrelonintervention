@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, telLink, telDisplay, mailLink } from "@/lib/config";
+import { site, telLink, telDisplay } from "@/lib/config";
 import { footerNav } from "@/lib/navigation";
 import { Icon } from "./Icon";
 
@@ -43,12 +43,6 @@ export function Footer() {
                 {telDisplay}
               </a>
             </p>
-            <p>
-              <a href={mailLink} className="flex items-center gap-2 hover:text-amber">
-                <Icon name="mail" className="h-4 w-4 shrink-0 text-amber" />
-                {site.email}
-              </a>
-            </p>
             <p className="flex items-center gap-2">
               <Icon name="clock" className="h-4 w-4 shrink-0 text-amber" />
               {site.hours}
@@ -88,9 +82,6 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <p className="mt-4 text-xs leading-relaxed text-cream/50">
-            Certifications : {site.certifications}. {site.guarantee}
-          </p>
         </div>
       </div>
 
@@ -99,7 +90,17 @@ export function Footer() {
           <p>
             © {year} {site.name}. Tous droits réservés.
           </p>
-          <p>Destruction de nids de frelons, frelons asiatiques et guêpes · Bordeaux & Gironde</p>
+          <p>
+            Site créé par{" "}
+            <a
+              href="https://enzoprat.fr"
+              target="_blank"
+              rel="noopener"
+              className="font-semibold text-cream/80 hover:text-amber"
+            >
+              Prat Enzo
+            </a>
+          </p>
         </div>
       </div>
     </footer>

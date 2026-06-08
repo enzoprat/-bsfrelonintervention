@@ -62,9 +62,9 @@ export function HeroUrgence() {
         <div className="relative animate-fade-in-up [animation-delay:300ms]">
           <div className="animate-float">
             <MediaPlaceholder
-              src="/images/technicien-equipe.jpg"
-              alt="Technicien équipé intervenant sur un nid de frelons sous une toiture à Bordeaux"
-              caption="Technicien équipé en intervention"
+              src="/images/equipe-bsfrelon.png"
+              alt="L'équipe BS Frelon & Guêpe Intervention, technicien équipé d'une combinaison de protection à Bordeaux"
+              caption="Notre équipe en intervention"
               icon="shield"
               tone="amber"
               ratio="aspect-[4/5]"

@@ -39,9 +39,9 @@ export function Header() {
               <Icon name="clock" className="h-4 w-4 text-amber" />
               {site.hours}
             </span>
-            <a href={`mailto:${site.email}`} className="flex items-center gap-2 hover:text-amber">
-              <Icon name="mail" className="h-4 w-4 text-amber" />
-              {site.email}
+            <a href={telLink} className="flex items-center gap-2 hover:text-amber" data-event="click_call">
+              <Icon name="phone" className="h-4 w-4 text-amber" />
+              {telDisplay}
             </a>
           </p>
         </div>

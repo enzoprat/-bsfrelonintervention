@@ -25,14 +25,14 @@ export default function PolitiqueConfidentialitePage() {
             Politique de confidentialité
           </h1>
           <p className="text-sm text-graytext">
-            Document type à adapter avec les informations réelles de l'entreprise (champs entre
-            crochets).
+            Cette politique décrit la manière dont vos données personnelles sont collectées et
+            traitées lorsque vous utilisez ce site, notamment le formulaire de demande de devis.
           </p>
 
           <h2>Responsable du traitement</h2>
           <p>
             Le responsable du traitement des données collectées sur ce site est <strong>{site.name}</strong>,
-            joignable au {site.phone} ou par e-mail à {site.email}.
+            joignable par téléphone au {site.phone}.
           </p>
 
           <h2>Données collectées</h2>
@@ -53,9 +53,9 @@ export default function PolitiqueConfidentialitePage() {
           <h2>Destinataires</h2>
           <p>
             Vos données sont destinées aux seules personnes en charge du traitement des demandes au
-            sein de {site.name}. Elles ne sont jamais revendues. Le formulaire peut transiter par un
-            prestataire technique d'envoi (par exemple [[PRESTATAIRE_FORMULAIRE]]) agissant comme
-            sous-traitant.
+            sein de {site.name}. Elles ne sont jamais revendues. L'envoi du formulaire transite par
+            le service technique Web3Forms (Web3Forms / Spck SAS), qui agit comme sous-traitant
+            uniquement pour acheminer votre message.
           </p>
 
           <h2>Durée de conservation</h2>
@@ -67,10 +67,9 @@ export default function PolitiqueConfidentialitePage() {
           <h2>Vos droits</h2>
           <p>
             Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement,
-            de limitation et d'opposition au traitement de vos données. Pour les exercer, contactez
-            {" "}
-            {site.email}. Vous pouvez également introduire une réclamation auprès de la CNIL
-            (www.cnil.fr).
+            de limitation et d'opposition au traitement de vos données. Pour les exercer, contactez-nous
+            par téléphone au {site.phone}. Vous pouvez également introduire une réclamation auprès de
+            la CNIL (www.cnil.fr).
           </p>
 
           <h2>Cookies et mesure d'audience</h2>

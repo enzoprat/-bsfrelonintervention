@@ -7,9 +7,8 @@ import { Icon } from "./Icon";
 type Status = "idle" | "sending" | "success" | "error";
 
 /**
- * Formulaire de demande de devis.
- * - Si NEXT_PUBLIC_WEB3FORMS_KEY est défini : envoi via Web3Forms.
- * - Sinon : repli mailto (ouvre le client mail pré-rempli).
+ * Formulaire de demande de devis, envoyé via Web3Forms
+ * (clé NEXT_PUBLIC_WEB3FORMS_KEY). En cas d'échec, on invite à appeler.
  * `compact` = version express en 5 champs (page urgence).
  */
 export function ContactForm({ compact = false }: { compact?: boolean }) {
@@ -20,23 +19,8 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Repli mailto si aucune clé de formulaire n'est configurée.
     if (!site.web3formsKey) {
-      const lines = [
-        `Nom : ${data.get("nom")}`,
-        `Téléphone : ${data.get("telephone")}`,
-        `Ville : ${data.get("ville")}`,
-        `Type de nid : ${data.get("type_nid")}`,
-        !compact ? `Emplacement : ${data.get("emplacement")}` : "",
-        !compact ? `Hauteur : ${data.get("hauteur")}` : "",
-        !compact ? `Lien photo : ${data.get("lien_photo")}` : "",
-        `Message : ${data.get("message")}`,
-      ].filter(Boolean);
-      window.location.href = `${`mailto:${site.email}`}?subject=${encodeURIComponent(
-        "Demande de devis — nid de frelons/guêpes",
-      )}&body=${encodeURIComponent(lines.join("\n"))}`;
-      setStatus("success");
-      form.reset();
+      setStatus("error");
       return;
     }
 

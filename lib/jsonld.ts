@@ -12,7 +12,6 @@ export function localBusinessSchema() {
     image: `${site.domain}${site.ogImage}`,
     url: site.domain,
     telephone: site.phone,
-    email: site.email,
     priceRange: "€€",
     address: {
       "@type": "PostalAddress",

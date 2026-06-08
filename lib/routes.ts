@@ -174,6 +174,12 @@ export const routes: Route[] = [
     group: "Informations",
   },
   {
+    path: "/conditions-generales-vente",
+    label: "Conditions générales de vente",
+    priority: 0.2,
+    group: "Informations",
+  },
+  {
     path: "/politique-confidentialite",
     label: "Politique de confidentialité",
     priority: 0.2,

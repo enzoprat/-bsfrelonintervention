@@ -22,7 +22,7 @@ export function ReviewPlaceholder() {
           ))}
         </div>
         <p className="text-sm font-medium text-graytext">
-          {site.googleReviewsLabel} — emplacement pour vos avis Google vérifiés
+          Emplacement pour vos avis Google vérifiés
         </p>
       </div>
 
