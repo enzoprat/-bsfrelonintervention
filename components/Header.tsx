@@ -57,17 +57,24 @@ export function Header() {
             scrolled ? "h-14 lg:h-16" : "h-16 lg:h-20"
           }`}
         >
-          <Link href="/" className="flex items-center gap-2.5" aria-label={`${site.name} — accueil`}>
+          <Link
+            href="/"
+            className="flex min-w-0 items-center gap-2.5"
+            aria-label={`${site.name} — accueil`}
+          >
             <span
-              className={`flex items-center justify-center rounded-xl bg-ink text-amber shadow-soft transition-all duration-300 ${
+              className={`flex shrink-0 items-center justify-center rounded-xl bg-ink text-amber shadow-soft transition-all duration-300 ${
                 scrolled ? "h-9 w-9" : "h-10 w-10"
               }`}
             >
               <Icon name="shield" className="h-6 w-6" />
             </span>
-            <span className="flex flex-col leading-tight">
-              <span className="font-display text-lg font-extrabold text-ink">{site.name}</span>
-              <span className="text-xs font-medium text-graytext">
+            <span className="flex min-w-0 flex-col leading-tight">
+              <span className="truncate font-display text-base font-extrabold text-ink sm:text-lg">
+                <span className="sm:hidden">{site.shortName}</span>
+                <span className="hidden sm:inline">{site.name}</span>
+              </span>
+              <span className="truncate text-[0.7rem] font-medium text-graytext sm:text-xs">
                 Nids de frelons & guêpes · Bordeaux
               </span>
             </span>
