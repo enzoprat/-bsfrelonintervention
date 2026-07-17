@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { StickyCallBar } from "@/components/StickyCallBar";
 import { BackToTop } from "@/components/BackToTop";
 import { Analytics } from "@/components/Analytics";
+import { ConversionEvents } from "@/components/ConversionEvents";
 import { JsonLd } from "@/components/JsonLd";
 import { localBusinessSchema } from "@/lib/jsonld";
 import { site } from "@/lib/config";
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StickyCallBar />
         <BackToTop />
         <Analytics />
+        <ConversionEvents />
       </body>
     </html>
   );
